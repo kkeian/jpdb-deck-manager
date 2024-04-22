@@ -30,8 +30,10 @@ export async function loadCachedDeck(deck: Deck): Promise<DeckWithVocab | null> 
     if (
       o.id !== deck.id ||
       o.name !== deck.name ||
-      o.word_count != deck.word_count ||
-      o.vocab_count != deck.vocab_count
+      o.word_count !== deck.word_count ||
+      o.vocab_count !== deck.vocab_count ||
+      o.known_coverage !== deck.known_coverage ||
+      o.learning_coverage !== deck.learning_coverage
     ) {
       await db.decks.delete(deck.id);
       return null;
