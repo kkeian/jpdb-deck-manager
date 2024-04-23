@@ -14,7 +14,7 @@
   let absolute_max_words = 0;
   let absolute_min_vocabs = 0;
   let absolute_max_vocabs = 0;
-  let custom_learnahead = 200;
+  let custom_learnahead = 175;
   let decks_with_coverage = decks.map((deck) => {
     let lc_custom = learnAheadCoverage(deck.vocabs, custom_learnahead);
     return {

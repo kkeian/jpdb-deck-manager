@@ -32,7 +32,7 @@
   let absolute_max_words = 0;
   let handler = new DataHandler(results);
   let rows = handler.getRows();
-  let learnahead = 200;
+  let learnahead = 175;
   $: if (learnahead > 0) {
     recalculate();
   }
